@@ -37,13 +37,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             VALUES
             ('$name','$username','$hashPassword','$email','$number','$address','$dob')";
 
-            if ($conn->query($sql))
+            if (mysqli_query($conn, $sql))
             {
                 $success = "Registration complete";
             }
             else
             {
-                $error = "ERROR " . $conn->error;
+                $error = "ERROR " . mysqli_error($conn);
             }
         }
     }
@@ -79,7 +79,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <div class="box">
         <h2>Registration Status</h2>
 
-        <p style="color:green;"><?php echo $success; ?></p>
+        <p style="color:green;">
+            <?php //echo $success; ?>
+        </p>
+        <?php
+       if (!empty($success)) {
+    header("Location: ../HTML/login.php");
+    exit(); 
+         }
+?>
+
         <p style="color:red;"><?php echo $error; ?></p>
 
         <a href="../HTML/register.php">Register</a>

@@ -26,8 +26,8 @@
 }
   button {
     
-    margin: 5px auto;   
-    padding: 6px 20px;
+    margin: 10px auto;   
+    padding: 6px 30px;
     border-radius: 5px;
   }
   #L1 {
@@ -97,13 +97,11 @@
   <br><br>
 
     <a href="Farmer/HTML/login.php">
-    <button type="button" id="L1"> LOGIN</button>
+    <button type="button" id="L1"> LOGIN OR REGISTER</button>
 </a>
 <br><br>
   
-  <br>
-  <p>If you are not a user, please Register !!</p>
-  <button>Register</button>
+  
 </form>
 </div>
 </body>
