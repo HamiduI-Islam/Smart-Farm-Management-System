@@ -77,7 +77,7 @@ $current = $seasonData[$season];
         border-left: 5px solid #4CAF50;
         border-radius: 8px;
         margin-top: 100px; 
-        height: 250px;
+        height: 350px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     }
 
@@ -133,13 +133,19 @@ $current = $seasonData[$season];
     </div>
 
     <div class="form-right">
+
+    <?php if (isset($_GET['status']) && $_GET['status'] == 'success'): ?>
+        <p style="color: #2e7d32; background-color: #e8f5e9; padding: 10px; border-radius: 5px; border: 1px solid #c8e6c9; font-weight: bold; text-align: center;">
+            ✔ Tutorial Added Successfully!
+        </p>
+    <?php endif; ?>
         <h3>Add New Tutorial</h3>
         <form action="save_tutorial.php" method="POST">
             <label>YouTube Video Link:</label>
             <input type="url" name="video_link" placeholder="https://youtube.com/..." required>
 
             <label>Season Name:</label>
-            <input type="text" name="season_name" value="<?php echo ucfirst($season); ?>" required>
+            <input type="text" name="season_name" value="<?php echo ucfirst($season); ?>" readonly>
 
             <button type="submit" name="send">Send</button>
         </form>
