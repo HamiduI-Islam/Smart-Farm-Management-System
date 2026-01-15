@@ -5,7 +5,7 @@ session_start();
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = mysqli_real_escape_string($conn, trim($_POST["username"]));
+    $username = trim($_POST["username"]);
     $password = trim($_POST["password"]);
 
     if (empty($username) || empty($password)) {
@@ -16,23 +16,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (mysqli_num_rows($result_farmer) == 1) {
             $row = mysqli_fetch_assoc($result_farmer);
-
             if (password_verify($password, $row["Password"])) {
-                $_SESSION["username"] = $username;
-                $_SESSION["name"] = $row["Name"];
-                $_SESSION["role"] = "farmer";
+                if ($row['Status'] == 'Pending') {
+                    echo "<script>alert('Your account is waiting for approval from the Admin.'); window.location.href='../HTML/login.php';</script>";
+                    exit();
+                } elseif ($row['Status'] == 'accepted') {
+                    $_SESSION["username"] = $username;
+                    $_SESSION["name"] = $row["Name"];
+                    $_SESSION["role"] = "farmer";
 
-                $cookie_time = isset($_POST["remember_me"]) ? time() + (86400 * 30) : time() + 3600;
-                setcookie("username", $username, $cookie_time, "/");
+                    $cookie_time = isset($_POST["remember_me"]) ? time() + (86400 * 30) : time() + 3600;
+                    setcookie("username", $username, $cookie_time, "/");
 
-                header("Location: dashboard.php");
-                exit();
+                    header("Location: dashboard.php");
+                    exit();
+                }
             } else {
                 $error = "Incorrect password for farmer";
             }
-        } 
-        else {
-
+        } else {
             $sql_admin = "SELECT * FROM Admin WHERE User_Name = '$username'";
             $result_admin = mysqli_query($conn, $sql_admin);
 
