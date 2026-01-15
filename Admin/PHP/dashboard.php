@@ -40,7 +40,7 @@ if ($result_count && $row = $result_count->fetch_assoc()) {
     <li><a href="../HTML/tutorial.php">Give Farming Tutorial</a></li>
     <li><a href="../HTML/add_user.php">Add User</a></li>
     <li><a href="order.html">Maintain Order Process</a></li>
-    <li><a href="user_details.html">View User Details</a></li>
+    <li><a href="user_status.php">View User Details</a></li>
     <li><a href="loan.html">Manage Lease/Loan Process</a></li>
     <li><a href="">Verify Land</a></li>
     
