@@ -10,8 +10,8 @@ if (isset($_POST['send'])) {
         header("Location: dashboard.php?error=empty");
         exit();
     }
-
-    $sql = "INSERT INTO Tutorial (Video_Link, Season) VALUES ('$video_link', '$season_name')";
+       $final_link = str_replace("watch?v=", "embed/", $video_link);
+    $sql = "INSERT INTO Tutorial (Video_Link, Season) VALUES ('$final_link', '$season_name')";
 
     if (mysqli_query($conn, $sql)) {
         header("Location: tutorial.php?status=success");
