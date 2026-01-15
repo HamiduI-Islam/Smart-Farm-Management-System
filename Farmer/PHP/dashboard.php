@@ -33,7 +33,7 @@ include "../../Farmer/DB/db.php";
         <ul class="admin-menu">
     <li><a href="../PHP/tutorial.php">Manage Product</a></li>
     <li><a href="order.html">Submit Sale Request</a></li>
-    <li><a href="user_details.html">See Farming Tutorial</a></li>
+    <li><a href="../HTML/view_tutorial.php">See Farming Tutorial</a></li>
     <li><a href="loan.html">Manage Lease/Loan Process</a></li>
     <li><a href="">Verify Land</a></li>
     

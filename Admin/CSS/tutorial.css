@@ -1,0 +1,25 @@
+
+body{
+  background-color: rgb(192, 219, 192);
+  align-items: center;
+  overflow: scroll;
+}
+#img{
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.section{
+  text-align: center;
+  background-color: bisque;
+  border-radius: 25px;
+}
+h1{
+  text-align: center;
+  
+}
+#month{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+}

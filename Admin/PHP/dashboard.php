@@ -37,7 +37,7 @@ if ($result_count && $row = $result_count->fetch_assoc()) {
 <div class="welcome-container">
     </div>
         <ul class="admin-menu">
-    <li><a href="../PHP/tutorial.php">Give Farming Tutorial</a></li>
+    <li><a href="../HTML/tutorial.php">Give Farming Tutorial</a></li>
     <li><a href="order.html">Maintain Order Process</a></li>
     <li><a href="user_details.html">View User Details</a></li>
     <li><a href="loan.html">Manage Lease/Loan Process</a></li>
