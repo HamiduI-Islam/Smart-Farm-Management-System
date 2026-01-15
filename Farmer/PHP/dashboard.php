@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +12,7 @@
     <?php include 'sidebar.php'; ?>
 
     <main class="dashboard-content" id="dashboard-content">
-        <h1>Welcome>!</h1>
+     <h1>Welcome! <?php echo $_SESSION["username"]; ?></h1>
         <p>Select a feature from the sidebar to see details here.</p>
     </main>
 
