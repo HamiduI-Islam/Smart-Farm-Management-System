@@ -12,7 +12,7 @@ $seasonData = [
             "Grains/Others" => "Sunflowers, Moong Dal, Summer Maize"
         ],
         "guide" => "Focus on soil preparation for summer. Ensure consistent watering. Prune fruit trees.",
-        "image" => ".../Admin/IMAGES/spring.jpg"
+        "image" => "../../Admin/IMAGES/spring.jpg"
     ],
     "summer" => [
         "title" => "☀️ Summer (Grishma)",
@@ -36,7 +36,7 @@ $seasonData = [
             "Grains/Others" => "Aman Rice (Main Transplanting), Jute harvesting"
         ],
         "guide" => "Ensure proper drainage to prevent root rot. Monitor for fungal infections.",
-        "image" => "../Admin/IMAGES/rainy.jpg"
+        "image" => "../../Admin/IMAGES/rainy.jpg"
     ],
     "winter" => [
         "title" => "❄️ Winter (Sheet)",
@@ -48,7 +48,7 @@ $seasonData = [
             "Grains/Others" => "Boro Rice, Wheat, Chickpeas, Garlic, Onion"
         ],
         "guide" => "Apply organic compost. Protect sensitive crops from frost. Ideal time for bee-keeping.",
-        "image" => "../Admin/IMAGES/winter.jpg"
+        "image" => "../../Admin/IMAGES/winter.jpg"
     ]
 ];
 
