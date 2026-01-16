@@ -1,16 +1,19 @@
-<<<<<<< HEAD
-=======
 <?php
-session_start();
 include "../../Farmer/DB/db.php"; 
+$sql_count = "SELECT COUNT(*) AS total FROM Farmer";
+$result_count = $conn->query($sql_count);
+$total_farmers = 0;
+
+if ($result_count && $row = $result_count->fetch_assoc()) {
+    $total_farmers = $row['total'];
+}
 ?>
->>>>>>> a0a612b573de5ce0d5a3b3fbb5e5ebf43d7c2777
 <!DOCTYPE html>
 <html>
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../../Admin/CSS/dashboard.css">
-    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <title>Admin Dashboard</title>
     <style>
         a {
             text-decoration: none; 
@@ -29,14 +32,15 @@ include "../../Farmer/DB/db.php";
 
     
     <div class="sidebar">
-        <img src="../../Admin/IMAGES/logo.JPG" class="logo">
+        <img src="../IMAGES/logo.JPG" class="logo">
         <h2>Smart Farm</h2>
 <div class="welcome-container">
     </div>
         <ul class="admin-menu">
-    <li><a href="../PHP/tutorial.php">Manage Product</a></li>
-    <li><a href="order.html">Submit Sale Request</a></li>
-    <li><a href="../HTML/view_tutorial.php">See Farming Tutorial</a></li>
+    <li><a href="../HTML/tutorial.php">Give Farming Tutorial</a></li>
+    <li><a href="../HTML/add_user.php">Add User</a></li>
+    <li><a href="order.html">Maintain Order Process</a></li>
+    <li><a href="user_status.php">View User Details</a></li>
     <li><a href="loan.html">Manage Lease/Loan Process</a></li>
     <li><a href="">Verify Land</a></li>
     
@@ -47,13 +51,14 @@ include "../../Farmer/DB/db.php";
     <div class="content">
         <div class="header">
            
-            <h1>Welcome, <?php echo $_SESSION["username"] ?></h1>
-            <a href="logout.php" class="logout">Logout</a>
+            <h1>Welcome, Admin</h1>
+            <a href="../../index.php" class="logout">Logout</a>
         </div>
 
         <div class="container">
             <div class="card">
                 <h3>Total Farmers</h3>
+                <p><b style="font-size: 40px; color: #000000;"><?php echo $total_farmers; ?></b></p>
                 <p>--</p>
             </div>
         </div>

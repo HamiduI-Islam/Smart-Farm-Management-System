@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             if (mysqli_query($conn, $sql))
             {
                 $success = "Registration complete";
+
             }
             else
             {
@@ -84,14 +85,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         </p>
         <?php
        if (!empty($success)) {
-    header("Location: ../HTML/login.php");
+    header("Location: ../PHP/dashboard.php");
     exit(); 
          }
 ?>
 
         <p style="color:red;"><?php echo $error; ?></p>
 
-        <a href="../HTML/register.php">Register</a>
+        <a href="../HTML/add_user.php">Register</a>
     </div>
 
 </body>

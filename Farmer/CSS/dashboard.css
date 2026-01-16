@@ -72,26 +72,17 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-    .dashboard-content {
-        margin-left: 200px;
-        padding: 20px;
-    }
-}
+.sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+.dashboard-content {
+            flex: 1; 
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
 
-@media screen and (max-width: 480px) {
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-    .dashboard-content {
-        margin-left: 0;
-        padding: 20px;
-    }
-}
 
 
