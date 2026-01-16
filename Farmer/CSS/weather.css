@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fff0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #c8facc;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #145214;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+.season-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.crops {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.crop-card {
+    background-color: #e0ffe0;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.guideline {
+    background-color: #d4ffd4;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 4px solid #2e7d32;
+}

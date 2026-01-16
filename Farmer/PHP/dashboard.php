@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 <?php
 session_start();
 include "../../Farmer/DB/db.php"; 
 ?>
->>>>>>> a0a612b573de5ce0d5a3b3fbb5e5ebf43d7c2777
 <!DOCTYPE html>
 <html>
 <head>
