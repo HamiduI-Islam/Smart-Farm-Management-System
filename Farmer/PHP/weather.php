@@ -36,7 +36,7 @@ $seasonData = [
             "Grains/Others" => "Aman Rice (Main Transplanting), Jute harvesting"
         ],
         "guide" => "Ensure proper drainage to prevent root rot. Monitor for fungal infections.",
-        "image" => "../Admin/IMAGES/rainy.jpg"
+        "image" => "../../Admin/IMAGES/rainy.jpg"
     ],
     "winter" => [
         "title" => "❄️ Winter (Sheet)",
