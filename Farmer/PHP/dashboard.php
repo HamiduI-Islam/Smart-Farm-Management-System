@@ -31,11 +31,12 @@ include "../../Farmer/DB/db.php";
 <div class="welcome-container">
     </div>
         <ul class="admin-menu">
-    <li><a href="../PHP/tutorial.php">Manage Product</a></li>
-    <li><a href="order.html">Submit Sale Request</a></li>
+    <li><a href="product.php">Manage Product</a></li>
+    <li><a href="salerequest.php">Submit Sale Request</a></li>
     <li><a href="../HTML/view_tutorial.php">See Farming Tutorial</a></li>
-    <li><a href="loan.html">Manage Lease/Loan Process</a></li>
-    <li><a href="">Verify Land</a></li>
+    <li><a href="weather.php">Get Weather Tips</a></li>
+    <li><a href="landlease.php">Manage Lease Process</a></li>
+    <li><a href="loan.php">Manage Loan Process</a></li>
     
 </ul>
     </div>
