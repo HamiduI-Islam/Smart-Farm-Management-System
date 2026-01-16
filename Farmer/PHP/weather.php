@@ -48,7 +48,7 @@ $seasonData = [
             "Grains/Others" => "Boro Rice, Wheat, Chickpeas, Garlic, Onion"
         ],
         "guide" => "Apply organic compost. Protect sensitive crops from frost. Ideal time for bee-keeping.",
-        "image" => "../Admin/IMAGES/winter.jpg"
+        "image" => "../../Admin/IMAGES/winter.jpg"
     ]
 ];
 
