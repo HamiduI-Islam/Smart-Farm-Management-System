@@ -1,0 +1,71 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fff4; /* Very light green background */
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #e6f9e8; /* Light green card */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+    color: #2E7D32; /* Dark green heading */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form label {
+    font-weight: bold;
+    color: #2E7D32; /* Dark green labels */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7; /* Soft green border */
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    background-color: #4CAF50; /* Medium green button */
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+    color: #2E7D32;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+}

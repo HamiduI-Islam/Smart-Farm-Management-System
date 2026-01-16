@@ -9,7 +9,6 @@
     <a href="#">🌱 Apply for Land Lease</a>
     <a href="#">🏦 Submit Loan Request</a>
     <a href="#">☀️ Weather Updates</a>
-    <a href="../HTML/product.html">Manage Product Details</a><br><br>
 
    
 </aside>
