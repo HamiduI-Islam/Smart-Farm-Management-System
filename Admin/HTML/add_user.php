@@ -37,7 +37,7 @@
         <input type="submit" value="Register">
     </form>
 
-    <p>Back To <a href="../HTML/dashboard.php" style="color:blue;">Dashboard</a></p>
+    <p>Back To <a href="../PHP/dashboard.php" style="color:blue;">Dashboard</a></p>
 </div>
 
 </body>
