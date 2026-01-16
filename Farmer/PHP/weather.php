@@ -12,7 +12,7 @@ $seasonData = [
             "Grains/Others" => "Sunflowers, Moong Dal, Summer Maize"
         ],
         "guide" => "Focus on soil preparation for summer. Ensure consistent watering. Prune fruit trees.",
-        "image" => ".../Admin/IMAGES/spring.jpg"
+        "image" => "../../Admin/IMAGES/spring.jpg"
     ],
     "summer" => [
         "title" => "☀️ Summer (Grishma)",
