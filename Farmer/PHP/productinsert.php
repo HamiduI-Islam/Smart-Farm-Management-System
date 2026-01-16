@@ -2,7 +2,7 @@
 session_start();
 include '../DB/db.php';
 
-!--if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username'])) {
     header("Location: ../HTML/login.php");
     exit();
 }
