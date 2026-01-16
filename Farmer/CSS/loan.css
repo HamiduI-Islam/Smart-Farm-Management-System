@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    background: #f1fff4;
+}
+
+.box {
+    width: 500px;
+    margin: 60px auto;
+    background: #e6f9e8;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #2e7d32;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #9ccc9c;
+}
+
+input[type=submit] {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
