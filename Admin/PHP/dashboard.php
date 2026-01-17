@@ -42,7 +42,7 @@ if ($result_count && $row = $result_count->fetch_assoc()) {
     <li><a href="../HTML/manageS.php">Maintain Order Process</a></li>
     <li><a href="user_status.php">View User Details</a></li>
     <li><a href="../HTML/leaseR.php">Manage Lease Request </a></li>
-    <li><a href="">Loan Process</a></li>
+    <li><a href="../HTML/manageL.php">Loan Process</a></li>
     
 </ul>
     </div>
