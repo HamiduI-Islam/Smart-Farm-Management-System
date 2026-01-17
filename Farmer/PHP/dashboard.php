@@ -37,6 +37,7 @@ include "../../Farmer/DB/db.php";
     <li><a href="weather.php">Get Weather Tips</a></li>
     <li><a href="landlease.php">Manage Lease Process</a></li>
     <li><a href="loan.php">Manage Loan Process</a></li>
+    <li><a href="trackRequest.php">Track Request</a></li>
     
 </ul>
     </div>
