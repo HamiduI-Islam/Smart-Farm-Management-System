@@ -49,10 +49,10 @@ function saveProduct()
     {
         if (this.readyState == 4 && this.status == 200)
         {
-            // শুধু success বা error message দেখাবে
+            
             document.getElementById("result").innerHTML = this.responseText;
 
-            // form reset
+           
             document.getElementById("type").value = "";
             document.getElementById("quantity").value = "";
             document.getElementById("unit").value = "";
