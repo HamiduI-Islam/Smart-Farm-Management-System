@@ -17,7 +17,8 @@ if($farmer_username != ''){
 $pending_products = [];
 if($farmer_id > 0){
     $sql_pending = "
-       
+        SELECT p.Product_Type, p.Unit, s.Quantity, s.Price, s.Status
+        FROM Products p
         INNER JOIN Sale_Requests s
         ON p.Farmer_Id = s.Farmer_Id AND p.Product_Type = s.Product_Type
         WHERE p.Farmer_Id='$farmer_id' AND s.Status='Pending'
