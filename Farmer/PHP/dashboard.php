@@ -7,7 +7,7 @@ include "../../Farmer/DB/db.php";
 <head>
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../Admin/CSS/dashboard.css">
-    <title>Farmer Dashboard</title>
+    <title>Smart Farmer Dashboard</title>
     <style>
         a {
             text-decoration: none; 
