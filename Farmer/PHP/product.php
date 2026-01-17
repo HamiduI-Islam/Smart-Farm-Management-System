@@ -49,10 +49,9 @@ function saveProduct()
     {
         if (this.readyState == 4 && this.status == 200)
         {
-            
+        
             document.getElementById("result").innerHTML = this.responseText;
 
-           
             document.getElementById("type").value = "";
             document.getElementById("quantity").value = "";
             document.getElementById("unit").value = "";
