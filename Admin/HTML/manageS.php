@@ -7,12 +7,7 @@ include '../DB/db.php';
     <title>Manage Sale Requests</title>
     <link rel="stylesheet" href="../CSS/salestyle.css">
     <style>
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-family: Arial, sans-serif; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #f2f2f2; }
-        tr:hover { background-color: #f9f9f9; }
-        .btn-accept { color: #28a745; text-decoration: none; font-weight: bold; }
-        .btn-reject { color: #dc3545; text-decoration: none; font-weight: bold; margin-left: 15px; }
+       
     </style>
 </head>
 <body>
