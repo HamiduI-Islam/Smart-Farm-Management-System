@@ -1,4 +1,4 @@
-<body style="font-family: sans-serif; background-color: #f4f7f6; padding: 40px;">
+<body style="font-family: sans-serif; background-color: #bbf6bf; padding: 40px;">
 
   <div id="info-block" style="
       display: block; 

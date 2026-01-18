@@ -6,11 +6,9 @@ include '../DB/db.php';
 <head>
     <title>Manage Sale Requests</title>
     <link rel="stylesheet" href="../CSS/salestyle.css">
-    <style>
-       
-    </style>
+    
 </head>
-<body>
+<body style="background-color: #bbf6bf;">
 <div class="content">
     <h2>Pending Sale Requests</h2>
 

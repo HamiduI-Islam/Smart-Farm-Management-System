@@ -27,7 +27,7 @@ include "../../Farmer/DB/db.php";
     </style>
     
 </head>
-<body>
+<body style=" background-color: #dcd8e0;">
 
     
     <div class="sidebar">

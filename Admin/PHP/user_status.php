@@ -25,7 +25,8 @@ $query = mysqli_query($conn, "SELECT * FROM Farmer WHERE status = 'pending'");
 <head>
     <title>User Status Management</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        body { font-family: Arial, sans-serif; background-color: #bbf6bf; padding: 20px; }
+       
         h2 { text-align: center; color: #333; }
         
         table {
@@ -33,13 +34,13 @@ $query = mysqli_query($conn, "SELECT * FROM Farmer WHERE status = 'pending'");
             margin: 20px auto;
             border-collapse: collapse;
             background-color: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(189, 239, 173, 0.1);
         }
         
         th, td {
             padding: 12px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #5dff75;
         }
         .header-container {
             width: 80%;
