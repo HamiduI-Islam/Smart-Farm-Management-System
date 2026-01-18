@@ -17,9 +17,6 @@
         Password:<br>
         <input type="password" name="password" value=""><br><br>
 
-        <label>
-            <input type="checkbox" name="remember_me"> Remember Me
-        </label>
         <br><br>
 
         <input type="submit" value="Login">

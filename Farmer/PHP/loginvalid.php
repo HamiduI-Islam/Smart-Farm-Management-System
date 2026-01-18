@@ -32,9 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION["name"] = $row["Name"];
                     $_SESSION["role"] = "farmer";
 
-                    $cookie_time = isset($_POST["remember_me"]) ? time() + (86400 * 30) : time() + 3600;
-                    setcookie("username", $username, $cookie_time, "/");
-
                     header("Location: dashboard.php");
                     exit();
                 }
