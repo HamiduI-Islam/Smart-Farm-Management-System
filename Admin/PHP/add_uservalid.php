@@ -15,19 +15,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $dob = $_POST["dob"];
 
     if (
-        empty($name) || empty($username) || empty($password) ||
-        empty($cpassword) || empty($email) || empty($number) ||
-        empty($address) || empty($dob)
-    )
-    {
-        $error = "Invalid do again";
-    }
-    else
-    {
-        if ($password != $cpassword)
-        {
-            $error = "Invalid do again";
-        }
+    empty($name) || empty($username) || empty($password) ||
+    empty($cpassword) || empty($email) || empty($number) ||
+    empty($address) || empty($dob)
+        ) {
+    $error = "Invalid do again";
+      } elseif (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+    $error = "Invalid do again";
+      } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $error = "Invalid do again";
+   } elseif (!is_numeric($number)) {
+    $error = "Invalid do again";
+   } elseif ($password != $cpassword) {
+    $error = "Invalid do again";
+   }
         else
         {
             $hashPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -48,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             }
         }
     }
-}
+
 ?>
 
 <!DOCTYPE html>

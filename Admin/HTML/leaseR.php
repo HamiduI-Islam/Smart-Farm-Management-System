@@ -11,7 +11,7 @@ include '../DB/db.php';
        
     </style>
 </head>
-<body>
+<body style="background-color: #bbf6bf;">
 
 <div class="container">
     <h2>Pending Land Lease Requests</h2>

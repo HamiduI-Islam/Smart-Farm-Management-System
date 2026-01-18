@@ -6,10 +6,10 @@ if (!isset($_SESSION['admin_name'])) {
      }
 include "../DB/db.php"; 
 $sql_count = "SELECT COUNT(*) AS total FROM Farmer";
-$result_count = $conn->query($sql_count);
+$result_count = mysqli_query($conn, $sql_count);
 $total_farmers = 0;
 
-if ($result_count && $row = $result_count->fetch_assoc()) {
+if ($result_count && $row = mysqli_fetch_assoc($result_count)) {
     $total_farmers = $row['total'];
 }
 ?>
@@ -45,7 +45,7 @@ if ($result_count && $row = $result_count->fetch_assoc()) {
     <li><a href="../HTML/tutorial.php">Give Farming Tutorial</a></li>
     <li><a href="../HTML/add_user.php">Add User</a></li>
     <li><a href="../HTML/manageS.php">Maintain Order Process</a></li>
-    <li><a href="user_status.php">View User Details</a></li>
+    <li><a href="user_status.php">Manage User</a></li>
     <li><a href="../HTML/leaseR.php">Manage Lease Request </a></li>
     <li><a href="../HTML/manageL.php">Loan Process</a></li>
     

@@ -9,12 +9,52 @@ session_start();
   <title>HOME PAGE</title>
 </head>
 <style>
-  body { background-color:rgba(205, 235, 205, 1); font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-  form { width: 350px; margin: 100px auto; padding: 20px; border: 2px solid green; border-radius: 8px; background-color: white; text-align: center; margin-top: 10px; margin-bottom: 10px; }
-  button { margin: 10px auto; padding: 6px 30px; border-radius: 5px; cursor: pointer; border: none; }
-  #L1 { background-color: rgb(124, 230, 124); width: 180px; height: 40px; margin: 0; transition: width 0.3s ease; font-weight: bold; }
-  #L1:hover { width: 170px; }
-  #img { width: 180px; height: auto; margin-bottom: 15px; }
+  body {
+    background-color: rgba(205, 235, 205, 1);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+form {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+button {
+    margin: 10px auto;
+    padding: 6px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#L1 {
+    background-color: rgb(124, 230, 124);
+    width: 180px;
+    height: 40px;
+    margin: 0;
+    font-weight: bold;
+    transition: width 0.3s ease;
+}
+
+#L1:hover {
+    width: 170px;
+}
 </style>
 <body>
   <nav style="display: flex; justify-content: space-between; align-items: center; background-color: white; padding: 20px 30px; border-left: 6px solid #7cb374; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-family: sans-serif;">

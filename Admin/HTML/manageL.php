@@ -9,7 +9,7 @@ session_start();
     <title>Manage Loan Requests</title>
     <link rel="stylesheet" href="../CSS/leasestyle.css">
 </head>
-<body>
+<body style="background-color: #bbf6bf;">
 
 <div class="container">
     <h2>Pending Loan Requests</h2>

@@ -8,7 +8,7 @@ $query = mysqli_query($conn, "SELECT * FROM tutorial");
 <head>
     <title>Farmer Tutorials</title>
     <style>
-        body { font-family: Arial; background: #f9f9f9; padding: 20px; }
+        body { font-family: Arial; background: #bbf6bf; padding: 20px; }
         .container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
         .video-card { background: white; padding: 15px; border: 1px solid #ddd; border-radius: 10px; text-align: center; width: 450px; }
         iframe { border-radius: 5px; width: 100%; height: 250px; }

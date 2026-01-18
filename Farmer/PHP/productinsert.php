@@ -16,25 +16,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $username = $_SESSION['username'];
 
-    $res = $conn->query("SELECT Id FROM Farmer WHERE User_Name='$username'");
+    $sql_farmer = "SELECT Id FROM Farmer WHERE User_Name='$username'";
+$res = mysqli_query($conn, $sql_farmer);
 
-    if ($res && $res->num_rows === 1) {
+if ($res && mysqli_num_rows($res) === 1) {
+    $farmer = mysqli_fetch_assoc($res);
+    $farmer_id = $farmer['Id'];
 
-        $farmer = $res->fetch_assoc();
-        $farmer_id = $farmer['Id'];
+    $sql = "INSERT INTO Products
+            (Farmer_Id, Product_Type, Quantity, Unit, Price_Per_Unit)
+            VALUES
+            ('$farmer_id', '$type', '$quantity', '$unit', '$price')";
 
-        $sql = "INSERT INTO Products
-                (Farmer_Id, Product_Type, Quantity, Unit, Price_Per_Unit)
-                VALUES
-                ('$farmer_id', '$type', '$quantity', '$unit', '$price')";
-
-        if ($conn->query($sql)) {
-            echo "Product saved successfully!";
-        } else {
-            echo "Database error";
-        }
-
+    if (mysqli_query($conn, $sql)) {
+        echo "Product saved successfully!";
     } else {
-        echo "Farmer not found";
+        echo "Database error";
     }
+} else {
+    echo "Farmer not found";
+}
 }
