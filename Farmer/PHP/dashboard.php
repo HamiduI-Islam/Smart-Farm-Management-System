@@ -1,6 +1,11 @@
 <?php
 session_start();
-include "../../Farmer/DB/db.php"; 
+if (!isset($_SESSION["username"])) {
+     header("Location: ../HTML/login.php"); 
+     exit(); 
+     }
+
+include "../../Farmer/DB/db.php";
 ?>
 <!DOCTYPE html>
 <html>

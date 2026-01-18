@@ -83,14 +83,14 @@ $current = $seasonData[$season];
 <head>
     <meta charset="UTF-8">
     <title>Farming Guide | <?php echo strtoupper($season); ?></title>
-    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="../CSS/weather.css">
 </head>
 <body>
 
 <div class="main-container">
     <div class="content-left">
         <div class="season-header">
-            <p style="color: #666; margin: 0;">Current Month: <strong><?php echo date('F'); ?></strong></p>
+            <p style="color: #000000; margin: 0;">Current Month: <strong><?php echo date('F'); ?></strong></p>
             <h1 style="margin: 5px 0;"><?php echo $current['title']; ?></h1>
         </div>
 

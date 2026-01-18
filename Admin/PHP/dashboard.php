@@ -1,5 +1,10 @@
 <?php
-include "../../Farmer/DB/db.php"; 
+session_start();
+if (!isset($_SESSION['admin_name'])) { 
+    header("Location: ../../Farmer/HTML/login.php"); 
+    exit();
+     }
+include "../DB/db.php"; 
 $sql_count = "SELECT COUNT(*) AS total FROM Farmer";
 $result_count = $conn->query($sql_count);
 $total_farmers = 0;
@@ -52,7 +57,7 @@ if ($result_count && $row = $result_count->fetch_assoc()) {
         <div class="header">
            
             <h1>Welcome, Admin</h1>
-            <a href="../../index.php" class="logout">Logout</a>
+           <a href="logout.php" class="logout">Logout</a>
         </div>
 
         <div class="container">

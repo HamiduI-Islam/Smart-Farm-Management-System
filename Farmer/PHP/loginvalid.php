@@ -1,6 +1,13 @@
 <?php
-include "../DB/db.php";
 session_start();
+include "../DB/db.php";
+if (isset($_SESSION["username"])) {
+    header("Location: dashboard.php");
+    exit();
+} elseif (isset($_SESSION['admin_name'])) {
+    header("Location: ../../Admin/PHP/dashboard.php");
+    exit();
+}
 
 $error = "";
 
@@ -35,14 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $error = "Incorrect password for farmer";
             }
         } else {
-            $sql_admin = "SELECT * FROM Admin WHERE User_Name = '$username'";
+            $sql_admin = "SELECT * FROM Admin WHERE User_name = '$username'";
             $result_admin = mysqli_query($conn, $sql_admin);
 
             if (mysqli_num_rows($result_admin) == 1) {
                 $row = mysqli_fetch_assoc($result_admin);
                 
                 if ($password == $row['Password']) {
-                    $_SESSION['admin_name'] = $row['User_Name'];
+                    $_SESSION['admin_name'] = $row['User_name'];
                     header("Location: ../../Admin/PHP/dashboard.php");
                     exit();
                 } else {
