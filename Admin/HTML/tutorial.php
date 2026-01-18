@@ -140,18 +140,40 @@ $current = $seasonData[$season];
         </p>
     <?php endif; ?>
         <h3>Add New Tutorial</h3>
-        <form action="save_tutorial.php" method="POST">
+        <form id="tutorialForm" action="save_tutorial.php" method="POST">
             <label>YouTube Video Link:</label>
             <input type="url" name="video_link" placeholder="https://youtube.com/..." required>
 
             <label>Season Name:</label>
             <input type="text" name="season_name" value="<?php echo ucfirst($season); ?>" readonly>
 
-            <button type="submit" name="send">Send</button>
+            <button type="submit">Send</button>
         </form>
+        <div id="ajaxResponse" style="margin-top: 15px;"></div>
     </div>
 </div>
+<script>
+document.getElementById('tutorialForm').onsubmit = function(e) {
+    e.preventDefault(); 
+    var responseDiv = document.getElementById('ajaxResponse');
+    var xhttp = new XMLHttpRequest();
+    var formData = new FormData(this);
 
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText.trim() === "success") {
+                responseDiv.innerHTML = '<p style="color: #2e7d32; background-color: #e8f5e9; padding: 10px; border-radius: 5px; border: 1px solid #c8e6c9; font-weight: bold; text-align: center;">✔ Tutorial Added Successfully!</p>';
+                document.getElementById('video_link').value = ""; 
+            } else {
+                responseDiv.innerHTML = '<p style="color: red;">Error: ' + this.responseText + '</p>';
+            }
+        }
+    };
+
+    xhttp.open("POST", "save_tutorial.php", true);
+    xhttp.send(formData);
+};
+</script>
 </body>
 </html>
 
