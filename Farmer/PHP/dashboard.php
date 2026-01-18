@@ -40,8 +40,8 @@ include "../../Farmer/DB/db.php";
     <li><a href="salerequest.php">Submit Sale Request</a></li>
     <li><a href="../HTML/view_tutorial.php">See Farming Tutorial</a></li>
     <li><a href="weather.php">Get Weather Tips</a></li>
-    <li><a href="landlease.php">Manage Lease Process</a></li>
-    <li><a href="loan.php">Manage Loan Process</a></li>
+    <li><a href="landlease.php">Submit Lease Request</a></li>
+    <li><a href="loan.php">Submit Loan Request</a></li>
     <li><a href="trackRequest.php">Track Request</a></li>
     
 </ul>
@@ -57,7 +57,7 @@ include "../../Farmer/DB/db.php";
 
         <div class="container">
             <div class="card">
-                <h3>Total Farmers</h3>
+                <h3>This Is Your Dashboard</h3>
                 <p>--</p>
             </div>
         </div>

@@ -7,15 +7,15 @@
 <body>
 
 <div class="box">
-    <h1>Farmer Portal</h1>
+    <h1>Login Portal</h1>
     <p>Welcome back to your farm</p>
 
     <form method="post" action="../PHP/loginvalid.php">
-        Username:<br>
-        <input type="text" name="username" value=""><br><br>
+       Username:<br>
+<input type="text" name="username" style="width: 365px; border-radius: 5px;"><br><br>
 
-        Password:<br>
-        <input type="password" name="password" value=""><br><br>
+Password:<br>
+<input type="password" name="password" style="width: 365px; border-radius: 5px;"><br><br>
 
         <br><br>
 
