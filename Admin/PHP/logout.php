@@ -2,6 +2,6 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header("Location: ../HTML/login.php");
+header("Location: ../../Farmer/HTML/login.php");
 exit();
 ?>
