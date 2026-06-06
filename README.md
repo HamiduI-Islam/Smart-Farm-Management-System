@@ -1,4 +1,4 @@
-# Smart-Farm Management System
+# 🚜 Smart-Farm Management System 🌾
 
 A comprehensive web application designed to bridge the gap between agricultural administrators and farmers. This platform streamlines daily farming operations, automates lease and loan application workflows, and provides data-driven insights to optimize agricultural productivity.
 
