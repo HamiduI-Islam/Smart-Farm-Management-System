@@ -68,3 +68,127 @@ The Farmer portal empowers agricultural workers with tools to sell products, app
 * **Backend/Logic:** PHP (MVC Structure)
 * **Database:** MySQL
 * **Frontend:** HTML5, CSS3, JavaScript
+
+## 🚀 Local Installation & Run Guide
+
+Follow this step-by-step guide to clone the project repository, set up the required MySQL database tables, and run the system locally.
+
+### Prerequisites
+Before you begin, ensure you have the following installed on your local machine:
+* **XAMPP** (with Apache and MySQL modules enabled)
+* **Git** command line tool
+
+---
+
+### Step 1: Clone the Repository
+
+1. Open your Terminal (Mac/Linux) or Git Bash (Windows).
+2. Change your working directory to your XAMPP local server web root directory:
+
+* **Windows:**
+  ```bash
+  cd C:\xampp\htdocs
+  cd /opt/lampp/htdocs
+  git clone [https://github.com/your-username/Smart-Farm-Management-System.git](https://github.com/your-username/Smart-Farm-Management-System.git)
+
+Start Local Servers
+
+Open the XAMPP Control Panel app.
+
+Click Start next to the Apache module.
+
+Click Start next to the MySQL module.
+
+Launch and Test the System
+Open your browser and navigate to the application deployment address path:
+
+Plaintext
+http://localhost/Smart-Farm-Management-System/
+## 💾 Database Schema & Local Setup Guide
+
+Because this application relies entirely on a relational MySQL database to process authentication, track loan statuses, and manage sales, you **must setup the database** before launching the application.
+
+### Step 1: Create the Database & Tables
+
+1. Open your browser and go to **phpMyAdmin**: `http://localhost/phpmyadmin/`
+2. Click **New** in the left sidebar, name the database **`smart_farm`**, and click **Create**.
+3. Click on your newly created `smart_farm` database, navigate to the **SQL** tab at the top, paste the following script into the editor, and click **Go**:
+
+```sql
+-- 1. Table structure for table `admin`
+CREATE TABLE `admin` (
+  `Id` int(100) NOT NULL AUTO_INCREMENT,
+  `User_name` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  PRIMARY KEY (`Id`)
+);
+
+-- 2. Table structure for table `farmer`
+CREATE TABLE `farmer` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) DEFAULT NULL,
+  `User_Name` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL,
+  `Number` int(11) DEFAULT NULL,
+  `Address` varchar(100) DEFAULT NULL,
+  `Date_of_Birth` varchar(100) DEFAULT NULL,
+  `Status` varchar(100) DEFAULT 'Pending',
+  `Role` varchar(100) NOT NULL DEFAULT 'farmer',
+  PRIMARY KEY (`Id`)
+);
+
+-- 3. Table structure for table `lease_requests`
+CREATE TABLE `lease_requests` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Farmer_Id` int(11) NOT NULL,
+  `Season` varchar(50) NOT NULL,
+  `Property_Type` varchar(100) NOT NULL,
+  `Status` varchar(100) DEFAULT 'Pending',
+  PRIMARY KEY (`Id`)
+);
+
+-- 4. Table structure for table `loan_requests`
+CREATE TABLE `loan_requests` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Farmer_Id` int(11) NOT NULL,
+  `Land_Info` text NOT NULL,
+  `Bank_Account` varchar(100) NOT NULL,
+  `Requested_Amount` decimal(15,2) NOT NULL,
+  `Status` varchar(100) DEFAULT 'Pending',
+  PRIMARY KEY (`Id`)
+);
+
+-- 5. Table structure for table `products`
+CREATE TABLE `products` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Farmer_Id` int(11) NOT NULL,
+  `Product_Type` varchar(50) NOT NULL,
+  `Quantity` decimal(10,2) NOT NULL,
+  `Unit` varchar(20) NOT NULL,
+  `Price_Per_Unit` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`Id`)
+);
+
+-- 6. Table structure for table `sale_requests`
+CREATE TABLE `sale_requests` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Farmer_Id` int(11) NOT NULL,
+  `Product_Type` varchar(100) NOT NULL,
+  `Quantity` decimal(10,2) NOT NULL,
+  `Price` decimal(10,2) NOT NULL,
+  `Status` varchar(100) DEFAULT 'Pending',
+  PRIMARY KEY (`Id`)
+);
+
+-- 7. Table structure for table `tutorial`
+CREATE TABLE `tutorial` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Video_Link` varchar(255) NOT NULL,
+  `Season` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- Seed Data for Default Admin Login(give value by your own while creating the table)
+INSERT INTO `admin` (`User_name`, `Password`) VALUES ('admin', 'admin123');
+---
